@@ -3,7 +3,11 @@
     flex-direction: column;
     background-color: aliceblue;
     width: 20%;
-    height: 40vh;
+    height: auto;
     align-items: center;
+    padding: 3em;
     
+}
+.card img {
+    max-width: 20vw;
 }

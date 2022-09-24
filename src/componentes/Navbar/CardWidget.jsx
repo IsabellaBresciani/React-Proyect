@@ -1,7 +1,11 @@
 import React from 'react'
 
-export default function CardWidget() {
+export default function CardWidget(props) {
+  const logo = {
+    width:"5%",
+    pading:"2%"
+  }
   return (
-    <div>x</div>
+    <img style={logo} src={props.src} alt='logo'></img>
   )
 }
