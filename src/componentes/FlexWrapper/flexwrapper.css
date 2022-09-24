@@ -1,0 +1,7 @@
+.parentCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4%;
+    flex-wrap: wrap;
+}
