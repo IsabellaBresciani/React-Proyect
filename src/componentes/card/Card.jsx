@@ -1,5 +1,6 @@
 import Button from "../Button/Button.jsx"
 import "./card.css"
+
 function Card(props){
     return(
         <div className="card">
@@ -9,7 +10,9 @@ function Card(props){
                 <p>{props.author}</p>
                 <p>{props.country}</p>
                 <p>{props.price}</p>
-                <Button text="buy me"/>
+            
+                    <Button text="buy me"/>
+               
             </div>
         </div>
     )
