@@ -1,20 +1,17 @@
 
-import React, {useState,useEffect} from 'react'
-import {getArt} from "../../mockAPI/mockAPI.js"
-import FlexWrapper from '../FlexWrapper/FlexWrapper.jsx'
+import FlexWrapper from '../FlexWrapper/FlexWrapper'
 import Card from "../card/Card"
-export default function ItemList() {
-    const [PinturaList,setPinturaList] = useState([]);
-    useEffect(()=>{
-        getArt().then((respuesta)=>{
-        setPinturaList(respuesta)
-    })
-  },[])
+import React from 'react'
+
+export default function ItemList(PinturaList) {
+    console.log(PinturaList)
     return (
     <>
     <FlexWrapper>
     {PinturaList.map((pintura)=>{
-      return <Card 
+      return <div className='card'>
+       <Card 
+      key = {pintura.id}
       id={pintura.id}
       img={pintura.img} 
       title={pintura.title} 
@@ -22,9 +19,10 @@ export default function ItemList() {
       country={pintura.country} 
       price={pintura.price} 
       />
+      </div>
     })}
   
   </FlexWrapper>
   </>
-  )
+    )
 }

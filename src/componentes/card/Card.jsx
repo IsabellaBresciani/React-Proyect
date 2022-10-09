@@ -1,6 +1,6 @@
-import Button from "../Button/Button.jsx"
 import "./card.css"
-
+import {Link} from 'react-router-dom'
+import React from "react";
 function Card(props){
     return(
         <div className="card">
@@ -10,9 +10,9 @@ function Card(props){
                 <p>{props.author}</p>
                 <p>{props.country}</p>
                 <p>{props.price}</p>
-            
-                    <Button text="buy me"/>
-               
+                <Link to={`/art/${props.id}`}>
+                    <button>Agregar al carrito</button>  
+                </Link>
             </div>
         </div>
     )

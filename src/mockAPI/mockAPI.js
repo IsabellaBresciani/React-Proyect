@@ -1,8 +1,10 @@
+
+
 const data = [
     {
         id:1,
         img:"https://artelista.s3.amazonaws.com/obras/fichas/0/5/2/4825230943179192.jpg",
-        title:"la mirada del palacio de oriente",
+        title:"La mirada del palacio de oriente",
         author:"JOSE LUIS PEREZ MUÑOZ",
         counthy: "España",
         price: 94959,
@@ -14,7 +16,7 @@ const data = [
     {
         id:2,
         img:"https://artelista.s3.amazonaws.com/obras/big/5/3/1/1204235.jpg",
-        title:"montaña leonesa el cebreiro",
+        title:"Montaña leonesa el cebreiro",
         author:"GUILLERMO CARBAJO",
         counthy: "España",
         price: 26186,
@@ -73,11 +75,39 @@ const data = [
         tematica: "desnudo"
     }
 ]
+
 export function getArt(){
     return new Promise((resolve)=>{
         setTimeout(()=>{
             resolve(data)
+            console.log(data)
         },2000)
+        
+    })
+}
+
+export function getSubArt(categoryID){
+    return new Promise((resolve)=>{
+        let subArt = data.filter(item =>
+            (item.tematica === categoryID)
+        )
+        console.log("subArt")
+        console.log(subArt)
+        setTimeout(()=>{
+            resolve(subArt)
+        },2000)
+        
+    })
+}
+
+export function getOneArt(idParams){
+    return new Promise((resolve)=>{
+        let artReq = data.find((item)=>{
+            return (item.id === Number(idParams))
+        })
+        setTimeout(()=>{
+            resolve(artReq)
+        },1000)
         
     })
 }

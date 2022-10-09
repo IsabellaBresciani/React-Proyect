@@ -6,13 +6,11 @@ function Button(props){
     
     useEffect(//solo se renderiza una vez en el montaje de la app
         ()=>{
-            console.log("montaje del componente")
         },
         [] //para que solo se renderize una vez le tengo que poner este arrray vacio, si no le doy ese array se va a renderizar en cada update del estado
     ) 
     useEffect(//solo se renderiza una vez en el montaje de la app
         ()=>{
-            console.log("update del estado")
         },
         [colorBtn] //si el color cambia se vuelve a llamar, siempre se llama al menos una vez
     ) 

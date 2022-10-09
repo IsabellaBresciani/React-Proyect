@@ -6,6 +6,6 @@ export default function CardWidget(props) {
     pading:"2%"
   }
   return (
-    <img style={logo} src={props.src} alt='logo'></img>
+    <img style={logo} src={props.src} alt='logo'/>
   )
 }
