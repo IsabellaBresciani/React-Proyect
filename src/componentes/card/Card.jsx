@@ -9,7 +9,7 @@ function Card(props){
                 <h4>{props.title}</h4>
                 <p>{props.author}</p>
                 <p>{props.country}</p>
-                <p>{props.price}</p>
+                <p>${props.price}</p>
                 <Link to={`/art/${props.id}`}>
                     <button>Agregar al carrito</button>  
                 </Link>

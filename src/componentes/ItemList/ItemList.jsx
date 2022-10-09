@@ -3,12 +3,12 @@ import FlexWrapper from '../FlexWrapper/FlexWrapper'
 import Card from "../card/Card"
 import React from 'react'
 
-export default function ItemList(PinturaList) {
-    console.log(PinturaList)
+export default function ItemList(pinturaList) {
+    console.log(pinturaList)
     return (
     <>
     <FlexWrapper>
-    {PinturaList.map((pintura)=>{
+    {pinturaList.pinturaList.map((pintura)=>{
       return <div className='card'>
        <Card 
       key = {pintura.id}

@@ -32,7 +32,8 @@ export default function CardDetail(pintura) {
                             <h4>{pintura.props.title}</h4>
                             <p>{pintura.props.author}</p>
                             <p>{pintura.props.country}</p>
-                            <p>${pintura.props.price}</p>   
+                            <p>${pintura.props.price}</p> 
+                            <p>medidas: {pintura.props.mesures}</p>  
                     </div>
             </div>
         </FlexWrapper>

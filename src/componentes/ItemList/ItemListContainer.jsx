@@ -4,12 +4,14 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { getArt, getSubArt } from '../../mockAPI/mockAPI'
 
-export default function ItemListContainer() { 
+export default function ItemListContainer(props) {
+  let saludo = props.greeting
+  console.log(saludo)
+
   let {categoryID} = useParams()
-  console.log(categoryID)
-  const [PinturaList,setPinturaList] = useState([]);
+  const [pinturaList,setPinturaList] = useState([]);
   useEffect(()=>{
-      if (categoryID === undefined){
+      if (!categoryID){
             getArt().then((respuesta)=>{
             setPinturaList(respuesta)
         });
@@ -21,6 +23,9 @@ export default function ItemListContainer() {
     },[categoryID])
 
   return (
-    <ItemList  category={PinturaList}/>
+    <>
+      <h1>{saludo}</h1>
+      <ItemList  pinturaList={pinturaList}/>
+    </>
   )
 }

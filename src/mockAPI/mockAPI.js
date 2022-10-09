@@ -80,19 +80,18 @@ export function getArt(){
     return new Promise((resolve)=>{
         setTimeout(()=>{
             resolve(data)
-            console.log(data)
-        },2000)
+            
+        },1000)
         
     })
 }
 
 export function getSubArt(categoryID){
+    console.log(categoryID)
     return new Promise((resolve)=>{
         let subArt = data.filter(item =>
             (item.tematica === categoryID)
         )
-        console.log("subArt")
-        console.log(subArt)
         setTimeout(()=>{
             resolve(subArt)
         },2000)
