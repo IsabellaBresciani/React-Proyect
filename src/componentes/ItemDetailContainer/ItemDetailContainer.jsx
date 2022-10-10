@@ -4,7 +4,7 @@ import {getOneArt} from "../../mockAPI/mockAPI"
 import {useParams} from "react-router-dom"
 
 export default function ItemDetailContainer() {
-  const [OnePinturaList,setOnePinturaList] = useState([]);
+  const [OnePinturaList,setOnePinturaList] = useState({});
     let {id} = useParams()
     useEffect(()=>{
         getOneArt(id).then((respuesta)=>{
@@ -12,6 +12,6 @@ export default function ItemDetailContainer() {
     })},[id])
 
   return (
-    <CardDetail props={OnePinturaList}/>
+    <CardDetail pintura={OnePinturaList}/>
   )
 }

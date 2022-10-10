@@ -8,7 +8,7 @@ const data = [
         author:"JOSE LUIS PEREZ MUÑOZ",
         counthy: "España",
         price: 94959,
-        stock:1,
+        stock:15,
         mesures:"35 x 50 cm",
         categoria:"pintura",
         tematica: "paisaje"
@@ -20,7 +20,7 @@ const data = [
         author:"GUILLERMO CARBAJO",
         counthy: "España",
         price: 26186,
-        stock:1,
+        stock:12,
         mesures:"36 x 28 cm",
         categoria:"pintura",
         tematica: "paisaje"
@@ -32,7 +32,7 @@ const data = [
         author:"jingshen you",
         counthy: "China",
         price: 87046,
-        stock:1,
+        stock:10,
         mesures:"120 x 90 cm",
         categoria:"pintura",
         tematica: "floral"
@@ -44,7 +44,7 @@ const data = [
         author:"Behshad Arjomandi",
         counthy: "Italia",
         price: 136680,
-        stock:1,
+        stock:11,
         mesures:"80 x 80 cm",
         categoria:"pintura",
         tematica: "floral"
@@ -56,7 +56,7 @@ const data = [
         author:"David Farrés Calvo",
         counthy: "España",
         price: 150680,
-        stock:1,
+        stock:17,
         mesures:"116 x 81 cm",
         categoria:"pintura",
         tematica: "desnudo"
@@ -69,7 +69,7 @@ const data = [
         author:"Doris Duschelbauer",
         counthy: "Irlanda",
         price: 180680,
-        stock:1,
+        stock:24,
         mesures:"55 x 162 cm",
         categoria:"pintura",
         tematica: "desnudo"
