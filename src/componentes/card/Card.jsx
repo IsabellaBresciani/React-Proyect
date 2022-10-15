@@ -11,7 +11,7 @@ function Card(props){
                 <p>{props.country}</p>
                 <p>${props.price}</p>
                 <Link to={`/art/${props.id}`}>
-                    <button>Agregar al carrito</button>  
+                    <button>ver detalle</button>  
                 </Link>
             </div>
         </div>

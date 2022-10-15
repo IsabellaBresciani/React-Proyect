@@ -1,34 +1,34 @@
 import React from 'react'
 import { useState } from 'react'
+import Button from '../Button/Button'
 
-const ItemCounter = ({onAdd,stock}) => {
+const ItemCounter = ({onAddItem,stock}) => {
     const [counter,setCounter]=useState(1)
 
-    const sumar= ()=>{
+    const plus = ()=>{
         if (counter<stock){
             setCounter(counter+1)
         }
     }
-    const restar= ()=>{
+    const onSubstract= ()=>{
         if (counter>1){
             setCounter(counter-1)
         }
     }
+    
   return (
         <>
         <div>
-            <button onClick={restar}>
-                -
-            </button>
+            <Button onClick={onSubstract} text="-" /> 
+
             <span>
                 {counter}
             </span>
-            <button onClick={sumar}>
-                +
-            </button>
+            <Button onClick={plus} text="+" />
+
         </div>
         <>
-        <button onClick={()=> onAdd(counter)}>Agregar al carrito</button>
+        <Button onClick={()=> {onAddItem(counter)}} text="Agregar al carrito"/>
         </>
     </>
 
