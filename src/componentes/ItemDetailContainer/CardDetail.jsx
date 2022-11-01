@@ -5,11 +5,13 @@ import ItemCounter from '../ItemCounter/ItemCounter'
 import { Link } from 'react-router-dom'
 import React, { useContext } from 'react'
 import { cartContext } from '../../Context/cartContext'
+import Loader from '../Loader/Loader'
 
 
 export default function CardDetail({pintura}) {
     const[counter,setCounter] = useState(0)
     const {addtoCart} = useContext(cartContext)
+    
     function onAddItem(counter){
         addtoCart(pintura,counter)
         setCounter(counter)
@@ -36,7 +38,7 @@ export default function CardDetail({pintura}) {
         justifyContent: "center",
         alignItems: "center"
     }
-
+    if(pintura.title) 
     return (
         <>
             <FlexWrapper>
@@ -54,5 +56,9 @@ export default function CardDetail({pintura}) {
                 
             </FlexWrapper>
         </>
-    )
+        
+    );
+    return <FlexWrapper>
+            <Loader size='100' speed='0.9' color='lightblue' />
+        </FlexWrapper>
 }

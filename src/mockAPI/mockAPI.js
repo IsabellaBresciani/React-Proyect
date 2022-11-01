@@ -81,31 +81,38 @@ export function getArt(){
         setTimeout(()=>{
             resolve(data)
             
-        },1000)
+        },2000)
         
     })
 }
 
 export function getSubArt(categoryID){
     console.log(categoryID)
-    return new Promise((resolve)=>{
+    return new Promise((resolve, reject)=>{
         let subArt = data.filter(item =>
             (item.tematica === categoryID)
         )
+       
         setTimeout(()=>{
-            resolve(subArt)
+        
+                resolve(subArt)
+    
         },2000)
         
     })
 }
 
 export function getOneArt(idParams){
-    return new Promise((resolve)=>{
+    return new Promise((resolve,reject)=>{
         let artReq = data.find((item)=>{
             return (item.id === Number(idParams))
         })
         setTimeout(()=>{
+            if(artReq === undefined){
+                reject(new Error("no se pudo encontrar la pintura."))
+            }else{
             resolve(artReq)
+            }
         },1000)
         
     })

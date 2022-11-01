@@ -1,4 +1,3 @@
-
 import React, { useContext } from 'react'
 import { cartContext } from '../../Context/cartContext'
 
@@ -8,10 +7,12 @@ export const CartWidget = () => {
     width:"5%",
     pading:"2%"
   }
+  let total = getTotalItems()
+  console.log(total)
   return (
     <>
     <img style={cartStyle} src="https://cdn-icons-png.flaticon.com/512/107/107831.png"  alt='cart' />
-    <span>{getTotalItems()}</span>
+    <span>{total>0 && total}</span>
     </>
   )
 }

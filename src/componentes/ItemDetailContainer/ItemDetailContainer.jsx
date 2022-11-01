@@ -9,15 +9,20 @@ export default function ItemDetailContainer() {
     let {id} = useParams()
     useEffect(()=>{
         getOneArt(id).then((respuesta)=>{
-        setOnePinturaList(respuesta).catch((error)=>{
-          setFeedbackmsg(error.message);
-        }
-        )
-    })},[id])
+        setOnePinturaList(respuesta)
+      })
+      .catch((error)=>{
+        setFeedbackmsg(error.message);});
+        
+      },[id])
 
+  
   return (
     <>
-      {Feedbackmsg !== null ? <h4>Error: {Feedbackmsg}</h4> : <CardDetail pintura={OnePinturaList}/> }
+      {Feedbackmsg !== null ? 
+      <h4>Error: {Feedbackmsg}</h4> 
+      : 
+      <CardDetail pintura={OnePinturaList}/> }
       
     </>
     
