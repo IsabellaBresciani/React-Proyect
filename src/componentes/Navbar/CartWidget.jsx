@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { cartContext } from '../../Context/cartContext'
+import { Link } from 'react-router-dom'
 
 export const CartWidget = () => {
   const {getTotalItems} = useContext(cartContext)
@@ -11,7 +12,7 @@ export const CartWidget = () => {
   console.log(total)
   return (
     <>
-    <img style={cartStyle} src="https://cdn-icons-png.flaticon.com/512/107/107831.png"  alt='cart' />
+    < Link to="/cart"><img style={cartStyle} src="https://cdn-icons-png.flaticon.com/512/107/107831.png"  alt='cart' /></Link> 
     <span>{total>0 && total}</span>
     </>
   )
